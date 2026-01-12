@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:15-alpine
+    image: docker.io/library/postgres:15-alpine
     container_name: interview-prep-db
     environment:
       POSTGRES_DB: interview_prep
@@ -16,7 +16,7 @@ services:
       - interview-net
 
   pgadmin:
-    image: dpage/pgadmin4:latest
+    image: docker.io/dpage/pgadmin4:latest
     container_name: interview-prep-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@interview.com
